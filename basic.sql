@@ -55,3 +55,6 @@ SELECT * FROM users LIMIT 10 OFFSET 10;
 
 -- usersテーブルから21 - 30件を選択
 SELECT * FROM users LIMIT 10 OFFSET 20;
+
+-- emailで並び替え
+SELECT * FROM users ORDER BY email ASC LIMIT 10;
