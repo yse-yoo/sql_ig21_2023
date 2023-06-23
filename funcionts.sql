@@ -36,4 +36,9 @@ MAX(price) AS max_price,
 MIN(price) AS min_price
 FROM items;
 
+-- 「items」の「price」の税抜き価格
+SELECT 
+*,
+ROUND(price / 1.1) AS price_without_tax 
+FROM items;
 
