@@ -31,3 +31,6 @@ SELECT * FROM users WHERE id IN (5, 10);
 SELECT * FROM users WHERE id != 5;
 
 SELECT * FROM users WHERE NOT(id = 5);
+
+-- usersテーブルで、「id」が大きい順（降順）に並べる
+SELECT * FROM users ORDER BY id DESC;
