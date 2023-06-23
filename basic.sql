@@ -46,3 +46,12 @@ SELECT email FROM users ORDER BY email ASC;
 
 -- usersテーブルで、「gender」の値の順、idが大きい順
 SELECT * FROM users ORDER BY gender ASC, id DESC;
+
+-- usersテーブルから最初の10件を選択
+SELECT * FROM users LIMIT 10;
+
+-- usersテーブルから11 - 20件を選択
+SELECT * FROM users LIMIT 10 OFFSET 10;
+
+-- usersテーブルから21 - 30件を選択
+SELECT * FROM users LIMIT 10 OFFSET 20;
