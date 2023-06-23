@@ -24,3 +24,5 @@ select * from users where id >= 5 and id < 10;
 
 -- usersテーブルから「id = 5」または「id = 10」のレコード選択
 SELECT * FROM users WHERE id = 5 OR id = 10;
+
+SELECT * FROM users WHERE id IN (5, 10);
