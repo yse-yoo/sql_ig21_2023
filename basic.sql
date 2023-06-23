@@ -14,3 +14,10 @@ SELECT * FROM users WHERE email = "naoko97@fujimoto.com";
 
 -- usersテーブルから「email」が「.com」のレコード選択
 SELECT * FROM users WHERE email LIKE "%.com%";
+
+-- usersテーブルから「id >= 5」のレコード選択
+SELECT * FROM users WHERE id >= 5;
+
+-- usersテーブルから「id >= 5」かつ「id < 10」のレコード選択
+SELECT * FROM users WHERE id >= 5 AND id < 10;
+select * from users where id >= 5 and id < 10;
