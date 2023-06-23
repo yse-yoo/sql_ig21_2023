@@ -12,3 +12,5 @@ SELECT * FROM users WHERE users.id = 1;
 -- usersテーブルから「email = xxxxxx」のレコード選択
 SELECT * FROM users WHERE email = "naoko97@fujimoto.com";
 
+-- usersテーブルから「email」が「.com」のレコード選択
+SELECT * FROM users WHERE email LIKE "%.com%";
