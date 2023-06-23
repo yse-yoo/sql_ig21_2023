@@ -20,3 +20,7 @@ INSERT INTO items (code, name, price, stock)
 
 -- 「items」テーブルから idを指定してレコード削除
 DELETE FROM items WHERE id = 4;
+
+-- codeが重複している場合は、エラー
+INSERT INTO items (code, name, price, stock) 
+    VALUES ("D00002", "アイスコーヒー", 350, 100);
