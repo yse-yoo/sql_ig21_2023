@@ -32,5 +32,8 @@ SELECT * FROM users WHERE id != 5;
 
 SELECT * FROM users WHERE NOT(id = 5);
 
--- usersテーブルで、「id」が大きい順（降順）に並べる
+-- usersテーブルで、「id」が大きい順（降順）に並べる: descending
 SELECT * FROM users ORDER BY id DESC;
+
+-- usersテーブルで、「email」のアルファベット順（昇順）に並べる: ascending
+SELECT email FROM users ORDER BY email ASC;
