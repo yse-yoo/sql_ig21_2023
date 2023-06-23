@@ -29,3 +29,11 @@ SUM(price * stock) AS total_price,
 AVG(price * stock) AS average_price
 FROM items;
 
+
+-- 「items」の「price」の最大値、最小値
+SELECT 
+MAX(price) AS max_price,
+MIN(price) AS min_price
+FROM items;
+
+
