@@ -37,3 +37,6 @@ SELECT * FROM users ORDER BY id DESC;
 
 -- usersテーブルで、「email」のアルファベット順（昇順）に並べる: ascending
 SELECT email FROM users ORDER BY email ASC;
+
+-- usersテーブルで、「gender」の値の順、idが大きい順
+SELECT * FROM users ORDER BY gender ASC, id DESC;
