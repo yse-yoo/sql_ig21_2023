@@ -22,3 +22,10 @@ COUNT(id) AS item_count,
 SUM(price) AS total_price,
 AVG(price) AS average_price
 FROM items;
+
+-- 「items」テーブルの総合計金額（「price x stock」の合計）
+SELECT 
+SUM(price * stock) AS total_price,
+AVG(price * stock) AS average_price
+FROM items;
+
