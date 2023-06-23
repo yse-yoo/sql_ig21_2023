@@ -12,10 +12,13 @@ SELECT * FROM users WHERE users.id = 1;
 -- usersテーブルから「email = xxxxxx」のレコード選択
 SELECT * FROM users WHERE email = "naoko97@fujimoto.com";
 
--- usersテーブルから「email」が「.com」のレコード選択
+-- usersテーブルから「email」が「.com」のレコード選択（部分一致）
 SELECT * FROM users WHERE email LIKE "%.com%";
 
--- usersテーブルから「email」が「ry」ではじまるレコード選択
+-- usersテーブルから「email」が「.com」のレコード選択（後方一致）
+SELECT * FROM users WHERE email LIKE "%.com";
+
+-- usersテーブルから「email」が「ry」ではじまるレコード選択（前方一致）
 SELECT * FROM users WHERE email LIKE "ry%";
 
 -- usersテーブルから「id >= 5」のレコード選択
