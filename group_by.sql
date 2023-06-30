@@ -14,3 +14,13 @@ SELECT
     SUM(total_price) AS total_price
 FROM user_items
 GROUP BY item_id;
+
+-- ユーザの集計
+SELECT 
+    users.id AS user_id,
+    users.name AS user_name,
+    COUNT(user_items.id) AS order_count,
+    SUM(user_items.total_price) AS total_price
+FROM user_items
+JOIN users ON user_items.user_id = users.id
+GROUP BY user_id;
