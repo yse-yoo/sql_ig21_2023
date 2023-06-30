@@ -15,7 +15,7 @@ JOIN users ON user_items.user_id = users.id
 WHERE user_items.user_id IN (SELECT id FROM users WHERE gender = "female");
 
 -- 平均価格より高い商品
-SELECT * FROM items WHERE price >= (SELECT AVG(price) FROM items);
+SELECT * FROM items WHERE price > (SELECT AVG(price) FROM items);
 
 -- FROM のサブクエリ
 SELECT 
