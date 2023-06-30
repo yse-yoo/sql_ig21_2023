@@ -35,3 +35,14 @@ SELECT
 FROM user_items
 JOIN items ON user_items.item_id = items.id
 GROUP BY item_id;
+
+-- ユーザの集計（user_id = 1）
+SELECT 
+    users.id AS user_id,
+    users.name AS user_name,
+    COUNT(user_items.id) AS order_count,
+    SUM(user_items.total_price) AS total_price
+FROM user_items
+JOIN users ON user_items.user_id = users.id
+WHERE user_items.user_id = 1
+GROUP BY user_id;
