@@ -45,3 +45,24 @@ SELECT
     user_items.created_at
 FROM users
 LEFT JOIN user_items ON user_items.user_id = users.id;
+
+-- RIGHT JOIN
+-- user_items を基準に usersと結合(RIGHT)
+SELECT 
+    users.id,
+    users.name,
+    user_items.item_id,
+    user_items.amount,
+    user_items.created_at
+FROM user_items
+RIGHT JOIN users ON user_items.user_id = users.id;
+
+-- users を基準に user_itemsと結合(RIGHT)
+SELECT 
+    users.id,
+    users.name,
+    user_items.item_id,
+    user_items.amount,
+    user_items.created_at
+FROM users
+RIGHT JOIN user_items ON user_items.user_id = users.id;
