@@ -24,3 +24,14 @@ SELECT
 FROM user_items
 JOIN users ON user_items.user_id = users.id
 GROUP BY user_id;
+
+-- 商品の集計
+SELECT 
+    items.id AS item_id,
+    items.name AS item_name,
+    COUNT(user_items.id) AS order_count,
+    SUM(user_items.amount) AS total_amount,
+    SUM(user_items.total_price) AS total_price
+FROM user_items
+JOIN items ON user_items.item_id = items.id
+GROUP BY item_id;
