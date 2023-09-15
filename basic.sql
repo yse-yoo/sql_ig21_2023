@@ -1,3 +1,6 @@
+-- CRUD
+-- Create, Read, Update, Delete
+
 -- usersテーブルからすべてのレコードを選択
 SELECT * FROM users;
 
